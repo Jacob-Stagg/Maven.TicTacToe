@@ -4,13 +4,14 @@ package rocks.zipcodewilmington.tictactoe;
  * @author leon on 6/22/18.
  */
 public class Board {
+    private final Character[][] matrix;
+
     public Board(Character[][] matrix) {
-        matrix = new Character[][]{{'X', 'O', 'X'}, {'O', 'X', 'O'}, {'X', 'O', 'X'}};
+        this.matrix = matrix;
     }
 
     public Boolean isInFavorOfX() {
         boolean isWinner = false;
-        Character[][] matrix = new Character[][]{{'X', 'O', 'X'}, {'O', 'X', 'O'}, {'X', 'O', 'X'}};
 
         if ((matrix[0][0].toString() + matrix[0][1].toString() + matrix[0][2].toString()).equals("XXX")) {
             isWinner = true;
@@ -39,7 +40,6 @@ public class Board {
 
     public Boolean isInFavorOfO() {
         boolean isWinner = false;
-        Character[][] matrix = new Character[][]{{'X', 'O', 'X'}, {'O', 'X', 'O'}, {'X', 'O', 'X'}};
 
         if ((matrix[0][0].toString() + matrix[0][1].toString() + matrix[0][2].toString()).equals("OOO")) {
             isWinner = true;
